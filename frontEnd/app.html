@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body class="bg-secondary">
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
+      aria-label="Main navigation"
+    >
+      <div class="container-fluid" id="contFluid">
+        <a class="navbar-brand" href="#">
+          <img src="/frontEnd/images/houses-fill.svg" alt="" />
+          Home Organizer</a
+        >
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          id="navbarSideCollapse"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="navbar-collapse offcanvas-collapse"
+          id="navbarsExampleDefault"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Homes</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Home 1</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-light" id="newHomeButton">
+          Add New Home
+        </button>
+        <button type="button" class="btn btn-light ms-2" id="newRoomButton">
+          Add New Room
+        </button>
+        <button type="button" class="btn btn-light ms-2" id="showRoomsButton">
+          Show Rooms
+        </button>
+      </div>
+    </nav>
+    <div id="mainContainer" class="container">
+      <div id="newHomeCont" class="container">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="typeInput">Type of Home</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Type of Home input"
+            aria-describedby="typeInput"
+            id="typeIn"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="nameInput">Name of Home</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Name of Home input"
+            aria-describedby="nameInput"
+            id="nameIn"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="stateInput">State</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Name of Home input"
+            aria-describedby="stateInput"
+            id="stateIn"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="cityInput">City</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Name of Home input"
+            aria-describedby="cityInput"
+            id="cityIn"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="zipInput">Zip</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Name of Home input"
+            aria-describedby="zipInput"
+            id="zipIn"
+          />
+        </div>
+        <button type="button" class="btn btn-dark" id="newHomeSubmit">
+          Submit
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger mt-2 mb-3"
+          id="newHomeCancel"
+        >
+          Cancel
+        </button>
+      </div>
+      <div id="newRoomCont" class="container">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="typeRoomInput">Type of Room</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Type of Home input"
+            aria-describedby="typeRoomInput"
+            id="typeRoomIn"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="nameRoomInput">Name of Room</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Name of Home input"
+            aria-describedby="nameRoomInput"
+            id="nameRoomIn"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="homeRoomInput">Home it is in</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Name of Home input"
+            aria-describedby="homeRoomInput"
+            id="homeRoomIn"
+          />
+        </div>
+        <button type="button" class="btn btn-dark" id="newRoomSubmit">
+          Submit
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger mt-2 mb-3"
+          id="newRoomCancel"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

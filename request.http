@@ -1,0 +1,76 @@
+###
+GET http://localhost:4000/api/mvp/category
+
+###
+GET http://localhost:4000/api/mvp/rooms
+
+###
+POST http://localhost:4000/api/mvp/rooms/
+Content-Type: application/json
+
+{
+  "home": 1,
+  "type": "Bedroom",
+  "name": "Brian's room"
+}
+
+###
+DELETE http://localhost:4000/api/mvp/rooms/12
+
+###
+GET http://localhost:4000/api/mvp/items
+
+###
+POST http://localhost:4000/api/mvp/items/
+Content-Type: application/json
+
+{
+  "category": 2,
+  "name": "Mattress",
+  "room": 1
+}
+
+###
+DELETE http://localhost:4000/api/mvp/items/2
+
+### 
+GET http://localhost:4000/api/mvp/home
+
+###
+POST http://localhost:4000/api/mvp/home/
+Content-Type: application/json
+
+{
+  "type": "Apartment",
+  "name": "Brian's Apartment",
+  "state": "Kentucky",
+  "city": "Clarksville",
+  "zip": 42223
+}
+
+###
+POST http://localhost:4000/api/mvp/home/
+content-Type: application/json
+
+{
+  "type": "House",
+  "name": "Brians House",
+  "state": "VA",
+  "city": "Woodbridge",
+  "zip": 22191
+}
+
+###
+PUT http://localhost:4000/api/mvp/home/1
+content-Type: application/json
+
+{
+  "type": "type",
+  "name": "name",
+  "state": "state",
+  "city": "city",
+  "zip": 12345
+}
+
+###
+DELETE http://localhost:4000/api/mvp/home/2

@@ -19,14 +19,14 @@ CREATE TABLE rooms (
   name varchar
 );
 
+CREATE TABLE category (
+  id serial PRIMARY KEY,
+  name varchar
+);
+
 CREATE TABLE items (
   id serial,
   category integer REFERENCES category (id),
   name varchar,
   room integer REFERENCES rooms (id)
-);
-
-CREATE TABLE category (
-  id serial PRIMARY KEY,
-  name varchar
 );
