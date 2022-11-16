@@ -29,3 +29,7 @@
   flex-direction: column;
   justify-content: center;
 }
+
+#introCont {
+  border: 2px black;
+}

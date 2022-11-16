@@ -28,7 +28,7 @@
   </head>
   <body class="bg-secondary">
     <nav
-      class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
+      class="navbar navbar-expand-lg fixed-top navbar-dark bg-danger"
       aria-label="Main navigation"
     >
       <div class="container-fluid" id="contFluid">
@@ -72,6 +72,9 @@
         </button>
         <button type="button" class="btn btn-light ms-2" id="showRoomsButton">
           Show Rooms
+        </button>
+        <button type="button" class="btn btn-light ms-2" id="showHomesButton">
+          Show Homes
         </button>
       </div>
     </nav>
@@ -179,6 +182,23 @@
         >
           Cancel
         </button>
+      </div>
+      <div id="introCont" class="container d-flex justify-content-center">
+        <span
+          class="border border-light border-4 rounded ps-3 pe-3 pt-3 pb-3 mt-3 bg-light"
+        >
+          <h2>Welcome to the Home Organizer app!</h2>
+          <hr />
+          <p>
+            Where you can organize the items in each room of your home or homes!
+            Never again will you find yourself confused as to where you last put
+            all of your stuff!
+          </p>
+          <hr />
+          <button type="button" class="btn btn-secondary" id="startButton">
+            Lets get started!
+          </button>
+        </span>
       </div>
     </div>
   </body>
