@@ -44,7 +44,7 @@ startButton.on("click", function () {
   );
 });
 
-fetch("http://localhost:4000/api/mvp/home")
+fetch("https://mvp-back-end.onrender.com/api/mvp/home")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((element) => {
@@ -53,7 +53,7 @@ fetch("http://localhost:4000/api/mvp/home")
   });
 
 function addNewHome() {
-  fetch("http://localhost:4000/api/mvp/home/1")
+  fetch("https://mvp-back-end.onrender.com/api/mvp/home/1")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((element) => {
@@ -68,7 +68,7 @@ showHomesButton.on("click", function () {
     "<button type='button' class='btn btn-light ms-2'>Hide Homes</button>"
   );
   contFluid.append(hideHomesButton);
-  fetch("http://localhost:4000/api/mvp/home")
+  fetch("https://mvp-back-end.onrender.com/api/mvp/home")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((element) => {
@@ -107,7 +107,7 @@ showHomesButton.on("click", function () {
         //     city: cityIn.val(),
         //     zip: zipIn.val(),
         //   };
-        //   fetch(`http://localhost:4000/api/mvp/home/${element.id}`, {
+        //   fetch(`https://mvp-back-end.onrender.com/api/mvp/home/${element.id}`, {
         //     method: "PUT",
         //     headers: { "Content-Type": "application/json" },
         //     body: JSON.stringify(body),
@@ -133,7 +133,7 @@ showRoomsButton.on("click", function () {
     "<button type='button' class='btn btn-light ms-2'>Hide Rooms</button>"
   );
   contFluid.append(hideRoomsButton);
-  fetch("http://localhost:4000/api/mvp/rooms")
+  fetch("https://mvp-back-end.onrender.com/api/mvp/rooms")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((element) => {
@@ -180,7 +180,7 @@ newHomeSub.on("click", function () {
     city: cityIn.val(),
     zip: zipIn.val(),
   };
-  fetch("http://localhost:4000/api/mvp/home/", {
+  fetch("https://mvp-back-end.onrender.com/api/mvp/home/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
@@ -207,7 +207,7 @@ newRoomSubmit.on("click", function () {
     type: typeRoomIn.val(),
     name: nameRoomIn.val(),
   };
-  fetch("http://localhost:4000/api/mvp/rooms/", {
+  fetch("https://mvp-back-end.onrender.com/api/mvp/rooms/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
